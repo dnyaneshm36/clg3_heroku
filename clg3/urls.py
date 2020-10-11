@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^status/', include('status.api.urls')),
+    url(r'^friend/', include('friend.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
