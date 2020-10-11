@@ -14,7 +14,6 @@ lazy-object-proxy==1.5.1
 Markdown==3.1.1
 mccabe==0.6.1
 Pillow==6.2.2
-pkg-resources==0.0.0
 psycopg2-binary==2.8.6
 pylint==1.9.5
 pytz==2020.1
