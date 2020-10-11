@@ -81,14 +81,13 @@ WSGI_APPLICATION = 'clg3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd7kb7opc9osb9i',
+        
+        'USER': 'hyfvofubtnhzwi',
 
-        'NAME': 'djangoclg',
+        'PASSWORD': '30bdd16620d575d8253c71864329b500894dc3e76379af6cbcc1a9aecab1aeaf',
 
-        'USER': 'postgres',
-
-        'PASSWORD': 'root',
-
-        'HOST': '127.0.0.1',
+        'HOST': 'ec2-52-23-86-208.compute-1.amazonaws.com',
 
         'PORT': '',
     }
