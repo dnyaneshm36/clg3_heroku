@@ -37,10 +37,10 @@ class StatusAPIView(
     def get_queryset(self):
         request = self.request
         qs = Status.objects.all()
-        query = self.request.GET.get('q')
+        query = self.request.GET.get('ur')
 
         if query is not None:
-            qs = qs.filter(content__icontains = query)
+            qs = qs.filter(user__exact = query)
         return qs
 
     def get_object(self):
