@@ -1,0 +1,1 @@
+web: gunicorn clg3.wsgi

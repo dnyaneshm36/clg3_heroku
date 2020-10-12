@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
     #local 
     'status',
-    'friend',
+    'friend'
 ]
 
 MIDDLEWARE = [

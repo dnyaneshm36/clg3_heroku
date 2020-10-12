@@ -46,10 +46,10 @@ class StatusAPIView(
     def get_queryset(self):
         request = self.request
         qs = Myfrienddetail.objects.all()
-        query = self.request.GET.get('q')
+        query = self.request.GET.get('ur')
 
         if query is not None:
-            qs = qs.filter(content__icontains = query)
+            qs = qs.filter(user__exact = query)
         return qs
 
     def get_object(self):
@@ -135,7 +135,12 @@ class StatusAPIView(
 
 
 
-
+'''
+the fielter based onf user field 
+passed in paramter uisng ur =1 
+if  url contation ur=2 them it contaion 
+it can give information  of one and another using user key
+'''
 
 
 
