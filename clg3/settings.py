@@ -138,3 +138,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+import rest_framework
+
+REST_FRAMEWORK = {
+     'DEFAULT_RENDERER_CLASSES': (
+         'rest_framework.renderers.JSONRenderer',
+     )
+ }
