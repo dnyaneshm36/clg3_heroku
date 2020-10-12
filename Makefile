@@ -1,11 +1,4 @@
-
-
-all: 
-	git init
+git:
 	git add .
-	git commit -m "adding files"
-
-
-
-
-	
+	git commit -m "$m"
+	git push -u origin master 
