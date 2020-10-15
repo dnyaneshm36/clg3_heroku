@@ -10,7 +10,7 @@ from rest_framework.generics import ListAPIView
 from friend.models import Myfrienddetail
 from .serializers import MyfrienddetailSerializer
 
-
+from django.contrib.auth.models import User
 
 
 from django.shortcuts import render
@@ -31,7 +31,7 @@ def is_json(json_data):
     return is_valid
 
 
-class StatusAPIView(
+class FriendAPIView(
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
@@ -78,7 +78,7 @@ class StatusAPIView(
         self.passed_id = passed_id
         if passed_id is not None:
             return self.retrieve(request, *args,**kwargs)
-        return super(StatusAPIView,self).get(request,*args,**kwargs)
+        return super(FriendAPIView,self).get(request,*args,**kwargs)
 
 
 
