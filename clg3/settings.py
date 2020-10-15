@@ -42,11 +42,14 @@ INSTALLED_APPS = [
 
     #local 
     'status',
-    'friend'
+    'friend',
+
+    'showuser',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,3 +141,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+import rest_framework
+
+# REST_FRAMEWORK = {
+#      'DEFAULT_RENDERER_CLASSES': (
+#          'rest_framework.renderers.JSONRenderer',
+#      )
+#  }
