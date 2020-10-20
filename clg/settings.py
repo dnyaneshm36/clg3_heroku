@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3oa9fob&u*3x6e1z8-o9etu+=f!bl59p14$9907=9f_mn7z#47'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0','localhost','127.0.0.1','dnyaneshrestapi.herokuapp.com','browserblerestapi.herokuapp.com']
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'friend',
 
     'showuser',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -144,8 +145,11 @@ STATICFILES_DIRS = (
 )
 import rest_framework
 
-REST_FRAMEWORK = {
-     'DEFAULT_RENDERER_CLASSES': (
-         'rest_framework.renderers.JSONRenderer',
-     )
- }
+# REST_FRAMEWORK = {
+#      'DEFAULT_RENDERER_CLASSES': (
+#          'rest_framework.renderers.JSONRenderer',
+#      )
+#  }
+
+
+from clg.restconfig.main import *
