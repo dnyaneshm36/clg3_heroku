@@ -65,7 +65,7 @@ class StatusAPIView(
     generics.ListAPIView): 
 
 
-    # permission_classes        =[permissions.IsAuthenticatedOrReadOnly]
+    permission_classes        =[permissions.IsAuthenticatedOrReadOnly]
     # authentication_classes    =[SessionAuthentication]
     serializer_class          =StatusSerializer
     passed_id                 =None
@@ -128,7 +128,7 @@ class StatusAPIView(
     #     return obj  
 
 
-
+dep
 
 
 
